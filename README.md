@@ -1,24 +1,25 @@
 # IdLocaler
 
-TODO: Write a gem description
+IdLocaler is rack middleware which one set your app i18n.locale by checking:    
+
+* Cookies
+* URL ( www.domain.com/en )
+* 'HTTP_ACCEPT_LANGUAGE' header
+
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Get the source and install it using gem manager.     
+I do not have pushed to gem server yet. :p     
 
-    gem 'id_localer'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install id_localer
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Add it to your Gemfile,
+2. bundle install 
+3. Insert it to the middleware stack. 
+
+_Be aware to the routes and middlewares sequences._
 
 ## Contributing
 

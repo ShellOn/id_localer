@@ -2,7 +2,7 @@ require "i18n"
 #---- InfoDinamika Libraries ----
 # id_localer v.0.0.1
 #
-# Give credit to the author of htttp_accept_language gem Iain Hecker
+# Give credit to the author of http_accept_language gem Iain Hecker
 #
 #   Author: ShellChen
 #   Date:   10/07/2012
