@@ -53,8 +53,8 @@ module IdLocaler
           end.collect do |l|
             l.first.downcase.gsub(/-[a-z0-9]+$/i) { |x| x.upcase }
           end
-          locale = locales.map do |x| #en-US
-            @i18n_locales.find do |y| # en
+          locale = locales.map do |x| # Example: zh-TW
+            @i18n_locales.find do |y| # results  zh
               y = y.to_s
               x == y || x.split('-', 2).first == y.split('-', 2).first
             end
@@ -65,11 +65,11 @@ module IdLocaler
           cookies.permanent[:locale] = locale # write locale into the cookies
         end
         I18n.locale = locale
-        s,h,b = @app.call(env)
+        status,header,body = @app.call(env)
         h['Content-Language'] = locale.to_s
-        [s,h,b]
+        [status,header,body]
       else
-        s,h,b = @app.call(env)
+        status,header,body = @app.call(env)
       end
     end
   end
